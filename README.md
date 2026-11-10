@@ -1,5 +1,3 @@
-# deleon_mobprog
-
 ### Karl Andrew L. De Leon
 
 ### 2024-1004570
@@ -8,8 +6,7 @@
 
 #
 
-Laboratory 0: Discussion
-A new Flutter project.
+Laboratory 0 Discussion: The primary challenge I've encountered is a licensing issue that arose after running the command "flutter doctor -v", which I resolved by running the provided command. Overall, I believe that listening carefully and following closely is critical in setting up the environment and completing this laboratory activity.
 
 ## Getting Started
 
