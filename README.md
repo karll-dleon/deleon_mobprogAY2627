@@ -8,7 +8,9 @@
 
 Laboratory 0 Discussion: The primary challenge I've encountered is a licensing issue that arose after running the command "flutter doctor -v", which I resolved by running the provided command. Overall, I believe that listening carefully and following closely is critical in setting up the environment and completing this laboratory activity.
 
-Laboratory 1 Discussion: I used the 'hasImage' function in 'newsfeed_card.dart' to dynamically change the post's image. If it has one, it loads the image; otherwise, it remains hidden. I also set the owl image as the default if no image path is specified, and I keep the placeholder box with an icon and text in case the image does not load properly. Aside from that, I created separate widgets for the user's avatar and the love button with the heart count, using 'flutter_screenutil' to adjust the sizes based on the screen.
+Laboratory 1 Discussion: In newsfeed_card.dart, hasImage toggles post images on or off, defaulting to an owl image if no path is given and showing an icon-and-text fallback box on load failure. I also split the user avatar and heart-count love button into responsive widgets sized with flutter_screenutil.
+
+Laboratory 2 Discussion: The primary challenge that I encountered while performing and accomplishing this laboratory activity, and the task that I found myself having a hard time with, was ensuring that the images, both for the post and the profile, were properly showing up and displaying in the feed. I overcame this by double-checking the file path and correctly inputting it. 
 
 ## Getting Started
 
