@@ -30,6 +30,34 @@ class _NewsfeedCardState extends State<NewsfeedCard> {
     });
   }
 
+  Widget _buildAvatar(PostItem item) {
+    final Widget fallbackAvatar = CircleAvatar(
+      radius: 18.r,
+      backgroundColor: APP_LIGHT_PRIMARY,
+      child: Icon(Icons.person, color: APP_PRIMARY, size: 20.sp),
+    );
+
+    if (item.avatarPath == null || item.avatarPath!.trim().isEmpty) {
+      return fallbackAvatar;
+    }
+
+    return ClipOval(
+      child: Image.asset(
+        item.avatarPath!,
+        width: 36.r,
+        height: 36.r,
+        fit: BoxFit.cover,
+        errorBuilder: (
+          BuildContext context,
+          Object error,
+          StackTrace? stackTrace,
+        ) {
+          return fallbackAvatar;
+        },
+      ),
+    );
+  }
+
   Widget _buildPlaceholderBox(String label) {
     return Container(
       height: 160.h,
@@ -71,11 +99,7 @@ class _NewsfeedCardState extends State<NewsfeedCard> {
           children: [
             Row(
               children: [
-                CircleAvatar(
-                  radius: 18.r,
-                  backgroundColor: APP_LIGHT_PRIMARY,
-                  child: Icon(Icons.person, color: APP_PRIMARY, size: 20.sp),
-                ),
+                _buildAvatar(item),
                 SizedBox(width: 10.w),
                 Expanded(
                   child: Column(
@@ -109,14 +133,13 @@ class _NewsfeedCardState extends State<NewsfeedCard> {
                   height: 180.h,
                   width: double.infinity,
                   fit: BoxFit.cover,
-                  errorBuilder:
-                      (
-                        BuildContext context,
-                        Object error,
-                        StackTrace? stackTrace,
-                      ) {
-                        return _buildPlaceholderBox(item.placeholderLabel);
-                      },
+                  errorBuilder: (
+                    BuildContext context,
+                    Object error,
+                    StackTrace? stackTrace,
+                  ) {
+                    return _buildPlaceholderBox(item.placeholderLabel);
+                  },
                 ),
               ),
             ] else if (item.hasPlaceholder) ...[

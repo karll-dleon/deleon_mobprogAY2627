@@ -8,6 +8,7 @@ class PostItem {
     required this.commentsCount,
     required this.sharesCount,
     required this.hasPlaceholder,
+    this.avatarPath,
     this.imagePath,
     this.placeholderLabel = 'PBB Collab 3.0 Media Placeholder',
   });
@@ -20,6 +21,7 @@ class PostItem {
   final int commentsCount;
   final int sharesCount;
   final bool hasPlaceholder;
+  final String? avatarPath;
   final String? imagePath;
   final String placeholderLabel;
 }
@@ -35,6 +37,7 @@ const List<PostItem> kSamplePosts = [
     commentsCount: 390,
     sharesCount: 215,
     hasPlaceholder: false,
+    avatarPath: 'assets/images/kuya.png',
   ),
   PostItem(
     id: 2,
@@ -45,8 +48,9 @@ const List<PostItem> kSamplePosts = [
     likesCount: 3190,
     commentsCount: 274,
     sharesCount: 98,
-    hasPlaceholder: false,
-    imagePath: 'assets/images/allen_birthday.jpg',
+    hasPlaceholder: true,
+    avatarPath: 'assets/images/allen.png',
+    imagePath: 'assets/images/allen_birthday.png',
     placeholderLabel: 'Allen Birthday Celebration Photo Placeholder',
   ),
   PostItem(
@@ -58,8 +62,9 @@ const List<PostItem> kSamplePosts = [
     likesCount: 2740,
     commentsCount: 210,
     sharesCount: 132,
-    hasPlaceholder: false,
-    imagePath: 'assets/images/lexi_house_entry.jpg',
+    hasPlaceholder: true,
+    avatarPath: 'assets/images/lexi.png',
+    imagePath: 'assets/images/lexi_house_entry.png',
     placeholderLabel: 'Lexi Gonzales House Entry Placeholder',
   ),
   PostItem(
@@ -72,6 +77,7 @@ const List<PostItem> kSamplePosts = [
     commentsCount: 145,
     sharesCount: 64,
     hasPlaceholder: false,
+    avatarPath: 'assets/images/eugene.png',
   ),
   PostItem(
     id: 5,
@@ -82,8 +88,9 @@ const List<PostItem> kSamplePosts = [
     likesCount: 3610,
     commentsCount: 302,
     sharesCount: 188,
-    hasPlaceholder: false,
-    imagePath: 'assets/images/gehlee_street_swag.jpg',
+    hasPlaceholder: true,
+    avatarPath: 'assets/images/gehlee.png',
+    imagePath: 'assets/images/gehlee_street_swag.png',
     placeholderLabel: 'Pinoy Street Swag Task Placeholder',
   ),
   PostItem(
@@ -96,6 +103,7 @@ const List<PostItem> kSamplePosts = [
     commentsCount: 119,
     sharesCount: 52,
     hasPlaceholder: false,
+    avatarPath: 'assets/images/jeo.png',
   ),
   PostItem(
     id: 7,
@@ -106,8 +114,9 @@ const List<PostItem> kSamplePosts = [
     likesCount: 2230,
     commentsCount: 164,
     sharesCount: 77,
-    hasPlaceholder: false,
-    imagePath: 'assets/images/race_matias_intro.jpg',
+    hasPlaceholder: true,
+    avatarPath: 'assets/images/race.png',
+    imagePath: 'assets/images/race_matias_intro.png',
     placeholderLabel: 'Race Matias Intro Card Placeholder',
   ),
   PostItem(
@@ -120,6 +129,7 @@ const List<PostItem> kSamplePosts = [
     commentsCount: 96,
     sharesCount: 41,
     hasPlaceholder: false,
+    avatarPath: 'assets/images/victoria.png',
   ),
   PostItem(
     id: 9,
@@ -131,6 +141,7 @@ const List<PostItem> kSamplePosts = [
     commentsCount: 183,
     sharesCount: 89,
     hasPlaceholder: false,
+    avatarPath: 'assets/images/raheel.png',
   ),
   PostItem(
     id: 10,
@@ -141,8 +152,9 @@ const List<PostItem> kSamplePosts = [
     likesCount: 5410,
     commentsCount: 428,
     sharesCount: 310,
-    hasPlaceholder: false,
-    imagePath: 'assets/images/pbb_collab_update_banner.jpg',
+    hasPlaceholder: true,
+    avatarPath: 'assets/images/pbb.png',
+    imagePath: 'assets/images/pbb_collab_update_banner.png',
     placeholderLabel: 'PBB Collab 3.0 Official Update Banner Placeholder',
   ),
 ];
